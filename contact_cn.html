@@ -228,26 +228,31 @@ function validateForm() {
                                 <p>Send us a message</p>
                             </div>
 
-                            <!-- wpcf7 start -->
-                            <form class="wpcf7" name="myForm" action="send.php" onsubmit="return validateForm()" method="post">
+                            <form id="contactForm" class="wpcf7" action="https://formspree.io/info@icurtain.co.nz" method="POST">
+                                <input type="text" id="gotcha" name="_gotcha" style="display:none" />
+
                                 <fieldset>
-                                    <label><span class="text-color">*</span> Name:</label>
-                                    <input type="text" class="wpcf7-text" id="contact-name" name="fname"/>
+                                    <label><span class="text-color">*</span> 称呼:</label>
+                                    <input type="text" class="wpcf7-text" id="name" name="name" />
                                 </fieldset>
 
                                 <fieldset>
-                                    <label><span class="text-color">*</span> Email:</label>
-                                    <input type="email" name="email" id="contact-email" class="wpcf7-text" />
+                                    <label><span class="text-color">*</span> 电话:</label>
+                                    <input type="tel" name="TEL" id="phone" class="wpcf7-text" />
                                 </fieldset>
 
                                 <fieldset>
-                                    <label><span class="text-color">*</span> Message:</label>
-                                    <textarea rows="5" class="wpcf7-textarea" id="contact-message" name="msg"></textarea>
+                                    <label><span class="text-color">*</span> 邮件:</label>
+                                    <input type="email" name="_replyto" id="email" class="wpcf7-text" />
+                                </fieldset>
+
+                                <fieldset>
+                                    <label><span class="text-color">*</span> 留言:</label>
+                                    <textarea rows="5" class="wpcf7-textarea" name="message" id="message"></textarea>
                                 </fieldset>
 
                                 <input type="submit" class="wpcf7-submit" value="Submit" />
-
-                            </form><!-- wpcf7 end -->
+                            </form>
                         </section><!-- .triggerAnimation.animated end -->
                     </article><!-- .col-md-6 end -->
                 </div><!-- .row end -->
