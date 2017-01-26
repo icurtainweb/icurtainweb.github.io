@@ -1,0 +1,98 @@
+<div id="fb-root"></div>
+
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=200311326756602";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<!-- jQuery Library -->
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<!-- jQuery migrate script -->
+<script src="js/jquery.bootstrap.min.js"></script>
+<!-- bootstrap -->
+<script src="js/jquery.scripts.min.js"></script>
+<!-- must be included in all files -->
+<script src="js/jquery.tweetscroll.js"></script>
+<!-- Tweetscroll plugin -->
+<script src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<!-- revolution slider -->
+<script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<!-- revolution slider -->
+<script src="js/jquery.isotope.min.js"></script>
+<!-- jQuery isotope -->
+<script src="js/portfolio.js"></script>
+<!-- .portfolio custom scripts -->
+<script src="sharre/jquery.sharrre-1.3.4.min.js"></script>
+<!-- Sharre post plugin -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<!-- used for image lightbox -->
+<script src="js/jquery.owlCarousel.min.js"></script>
+<!-- OwlCarousel for testimonial carousel -->
+<script src="js/include.js"></script>
+<!-- custom options -->
+
+<script>
+    jQuery(document).ready(function($) {
+        'use strict';
+
+        var revapi;
+        revapi = jQuery('.tp-banner').revolution({
+            delay: 5000,
+            startwidth: 1140,
+            startheight: 600,
+            hideThumbs: 10,
+            fullWidth: "on",
+            forceFullWidth: "on",
+            navigationType: "none" // bullet, thumb, none
+        });
+
+        $('.sharre-facebook').sharrre({
+            share: {
+                facebook: true
+            },
+            enableHover: false,
+            enableTracking: true,
+            click: function(api, options) {
+                api.simulateClick();
+                api.openPopup('facebook');
+            }
+        });
+
+        $("#owl-testimonial").owlCarousel({
+            autoPlay: true,
+            items: 1,
+            stopOnHover: true,
+            navigation: false,
+            paginationSpeed: 1000,
+            goToFirstSpeed: 2000,
+            singleItem: true,
+            autoHeight: true,
+            transitionStyle: "fade"
+        });
+
+    });
+    /* ]]> */
+</script>
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-88342304-1', 'auto');
+    ga('send', 'pageview');
+</script>
