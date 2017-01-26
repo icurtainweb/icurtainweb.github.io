@@ -1,0 +1,47 @@
+<script>
+    jQuery(document).ready(function($) {
+        'use strict';
+
+        var revapi;
+        revapi = jQuery('.tp-banner').revolution({
+            delay: 5000,
+            startwidth: 1140,
+            startheight: 600,
+            hideThumbs: 10,
+            fullWidth: "on",
+            forceFullWidth: "on",
+            navigationType: "none" // bullet, thumb, none
+        });
+
+        $('.sharre-facebook').sharrre({
+            share: {
+                facebook: true
+            },
+            enableHover: false,
+            enableTracking: true,
+            click: function(api, options) {
+                api.simulateClick();
+                api.openPopup('facebook');
+            }
+        });
+
+        $("#owl-testimonial").owlCarousel({
+            autoPlay: true,
+            items: 1,
+            stopOnHover: true,
+            navigation: false,
+            paginationSpeed: 1000,
+            goToFirstSpeed: 2000,
+            singleItem: true,
+            autoHeight: true,
+            transitionStyle: "fade"
+        });
+    });
+
+    jQuery(document).ready(function($) {
+        'use strict';
+
+        // Highlight nav menu item
+        $('.js-menu-item--{{ page.key }}').addClass('current-menu-item');
+    });
+</script>
