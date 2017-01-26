@@ -1,0 +1,24 @@
+{
+  "name": "icurtain.co.nz",
+  "version": "1.0.0",
+  "description": "landing page of icurtain",
+  "main": "index.js",
+  "scripts": {
+    "jekyll": "bundle exec jekyll serve --watch",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icurtainweb/icurtainweb.github.io.git"
+  },
+  "keywords": [
+    "landing",
+    "page"
+  ],
+  "author": "Ben Gao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icurtainweb/icurtainweb.github.io/issues"
+  },
+  "homepage": "https://github.com/icurtainweb/icurtainweb.github.io#readme"
+}
